@@ -1,2 +1,2 @@
 # Ionic2IonicNativeSQLite
-demonstration of using ionic2's ionic-native sqlite plugin
+Demonstration of using ionic2's ionic-native sqlite plugin
