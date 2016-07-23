@@ -5,14 +5,19 @@
 </ion-header>
 
 <ion-content padding class="home">
-  <h2>Welcome to Ionic!</h2>
-  Message: {{ message }}
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>app/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <h2>Welcome to Ionic2 Beta10 SQLite Demo!</h2>
+
+  Dance Moves
+  <ion-item>
+    <ion-label floating>New Move</ion-label>
+    <ion-input type="text" #newMoveName></ion-input>
+    <button (click)="onAddClick(newMoveName.value); newMoveName.value = '';" item-right>Add</button>    
+  </ion-item>
+  <br />
+  <ion-list>
+    <ion-item *ngFor="let m of moves">
+      {{ m.name }}
+      <ion-icon name="trash" (click)="onDeleteClick(m.id)" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>
