@@ -12,12 +12,12 @@ export class HomePage {
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
-    this.database = new SQLite();
+    this.database = new SQLite();    
     this.database.openDatabase({
       name: 'data.db',
       location: 'default' // the location field is required
     }).then(() => {
-      this.database.executeSql('drop table danceMoves', []).then(() => {
+      this.database.executeSql('drop table if exists danceMoves', []).then(() => {
         this.database.executeSql('create table IF NOT EXISTS danceMoves(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(32))', {}).then(() => {
             this.refresh();
           }, (err) => {
