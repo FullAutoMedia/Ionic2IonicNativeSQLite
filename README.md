@@ -1,4 +1,4 @@
-# Ionic2 Beta10 Ionic-Native SQLite
+# Ionic2 Beta11 Ionic-Native SQLite
 Demonstration on how to use Ionic2 Beta 11's ionic-native sqlite plugin
 
 <ul>
